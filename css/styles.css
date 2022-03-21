@@ -39,11 +39,17 @@ header {
   opacity: 1;
 } */
 
+.container-fluid {
+  /* padding: 0; */
+}
+
 .navbar,
-.navbar-nav {
+.navbar-nav,
+.navbar .row {
   background: rgb(30, 199, 185) !important;
   padding: 0;
   text-align: center;
+  z-index: 2;
 }
 
 .navbar-brand {
@@ -65,7 +71,12 @@ header {
   object-fit: cover;
   object-position: center;
 }
-
+@media (max-width: 991px) {
+  #menu-logo img {
+    /* position: relative; */
+    /* text-align: right; */
+  }
+}
 /* menu {
   margin: 15px;
   padding-inline-start: 0;
@@ -103,17 +114,23 @@ a:active {
 
 /*----styling for menu icons------*/
 #menu-icons {
-  /* position: relative;
-  top: 1px;
-  left: 45%; */
-  /* text-align: right; */
+  text-align: right;
 }
-@media (max-width: 768px) {
+@media (max-width: 1800px) {
   #menu-icons {
     position: relative;
-    /* top: 1px;
-    left: 45%; */
-    width: 100% !important;
+    /* text-align: center; */
+  }
+}
+@media (max-width: 1350px) {
+  #menu-icons {
+    position: relative;
+    /* text-align: left; */
+  }
+}
+@media (max-width: 991px) {
+  #menu-icons {
+    position: relative;
     text-align: center;
   }
 }
@@ -157,6 +174,45 @@ a:active {
   padding: 0 !important;
   margin: 0 !important;
 }
+@media (max-width: 991px) {
+  #waves-img {
+    /* position: relative; */
+    /* justify-content: center; */
+    /* display: none; */
+    object-fit: cover;
+    object-position: center;
+  }
+  #index-right {
+    width: 50%;
+    /* background-image: url(https://media.giphy.com/media/lFNmSjRDN9SiLJ3a9Z/giphy.gif); */
+  }
+  #logo-index {
+    z-index: auto;
+  }
+}
+@media (max-width: 575px) {
+  #waves-img {
+    /* position: absolute; */
+    /* display: contents; */
+    /* z-index: -1; */
+    /* opacity: 0.8; */
+    /* justify-content: center; */
+    /* display: none; */
+    /* object-fit: cover; */
+    /* object-position: center; */
+  }
+  #index-right {
+    width: 100%;
+    position: absolute;
+    /* z-index: 1; */
+    /* background-image: url(https://media.giphy.com/media/lFNmSjRDN9SiLJ3a9Z/giphy.gif); */
+  }
+  #logo-index {
+    position: absolute;
+    z-index: 1;
+  }
+}
+
 /* INDEX RIGHT SIDE */
 #index-right {
   text-align: center;
