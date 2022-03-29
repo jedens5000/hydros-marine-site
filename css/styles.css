@@ -116,16 +116,14 @@ a:active {
 #menu-icons {
   text-align: right;
 }
-@media (max-width: 1800px) {
+/* @media (max-width: 1800px) {
   #menu-icons {
     position: relative;
-    /* text-align: center; */
   }
 }
 @media (max-width: 1350px) {
   #menu-icons {
     position: relative;
-    /* text-align: left; */
   }
 }
 @media (max-width: 991px) {
@@ -133,7 +131,7 @@ a:active {
     position: relative;
     text-align: center;
   }
-}
+} */
 
 #menu-icons img {
   height: 30px;
@@ -145,72 +143,23 @@ a:active {
 .row {
   background-color: rgb(4, 70, 75);
   --bs-gutter-x: 0;
-  /* margin: 0 !important; */
-}
-.col-4 {
-  /* flex-basis: 360px !important; */
 }
 .col-6 {
   padding: 0 !important;
 }
 /* INDEX LEFT SIDE */
 #index-left {
-  /* padding: 0; */
-  /* margin: 0; */
   text-align: center;
 }
 
 #waves-img {
   object-fit: cover;
   object-position: center;
-  /* width: 100%; */
   height: 100vh;
   justify-content: center;
-  /* height: 400px; */
   text-align: center;
-  /* justify-content: left;
-  width: 100%;
-  height: 100%; */
   padding: 0 !important;
   margin: 0 !important;
-}
-@media (max-width: 991px) {
-  #waves-img {
-    /* position: relative; */
-    /* justify-content: center; */
-    /* display: none; */
-    object-fit: cover;
-    object-position: center;
-  }
-  #index-right {
-    width: 50%;
-    /* background-image: url(https://media.giphy.com/media/lFNmSjRDN9SiLJ3a9Z/giphy.gif); */
-  }
-  #logo-index {
-    z-index: auto;
-  }
-}
-@media (max-width: 575px) {
-  #waves-img {
-    /* position: absolute; */
-    /* display: contents; */
-    /* z-index: -1; */
-    /* opacity: 0.8; */
-    /* justify-content: center; */
-    /* display: none; */
-    /* object-fit: cover; */
-    /* object-position: center; */
-  }
-  #index-right {
-    width: 100%;
-    position: absolute;
-    /* z-index: 1; */
-    /* background-image: url(https://media.giphy.com/media/lFNmSjRDN9SiLJ3a9Z/giphy.gif); */
-  }
-  #logo-index {
-    position: absolute;
-    z-index: 1;
-  }
 }
 
 /* INDEX RIGHT SIDE */
@@ -222,23 +171,10 @@ a:active {
 #logo-index {
   margin-top: 30%;
   position: relative;
-  /* left: 25%; */
   opacity: 1;
-  /* justify-content: center; */
   text-align: center;
 }
 
-/* #logo-left {
-  display: inline-block;
-  position: relative;
-  right: 25%;
-  top: 200px;
-} */
-
-/* .email {
-  color: rgb(30, 199, 185);
-  text-decoration: none;
-} */
 a {
   text-decoration: none;
 }
@@ -248,11 +184,9 @@ header a:hover {
 }
 
 body {
-  /* background-color: rgb(4, 70, 75); */
   margin-top: 0;
   margin-bottom: 0;
   font-family: Montserrat, Nunito, sans-serif;
-  /* display: inline; */
 }
 
 /*------This make the text slide left--------*/
@@ -299,7 +233,6 @@ body {
 /*------This margin holds the text to the right side--------*/
 
 h1 {
-  /* margin: 0% 10% 0 60%; */
   color: ivory;
 }
 
@@ -317,8 +250,6 @@ form {
 #contact #index-right {
   text-align: center;
   margin: 100px 0 0 0;
-  /* display: table-cell; */
-  /* vertical-align: middle; */
 }
 
 /*------Footer--------*/
@@ -346,4 +277,40 @@ footer {
 #footer-text a:hover {
   color: blue !important;
   text-decoration: none;
+}
+
+#contact textarea {
+  max-width: 95%;
+}
+/* ////////////////MEDIA QUERIES//////////////// */
+@media (max-width: 991px) {
+  .navbar-expand-lg {
+    z-index: 2;
+  }
+  #menu-icons {
+    text-align: center;
+  }
+  #waves-img {
+    object-fit: cover;
+    object-position: center;
+  }
+  #index-right {
+    width: 50%;
+  }
+}
+@media (max-width: 575px) {
+  #index-right {
+    width: 100%;
+    position: absolute;
+    /* z-index: 1; */
+  }
+
+  /* CONTACT PG */
+  #contact #logo-index {
+    display: none !important;
+  }
+
+  #footer-text {
+    font-size: 70%;
+  }
 }
